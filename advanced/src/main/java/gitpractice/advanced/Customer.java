@@ -2,15 +2,23 @@ package gitpractice.advanced;
 
 public class Customer {
 
-    private int cId;
+    private int cid;
     private String cname;
-    private String ccourse;
+    private String cemail;
 
-    public int getcId() {
-        return cId;
+    public Customer() {
+
     }
-    public void setcId(int cId) {
-        this.cId = cId;
+
+    public Customer(String cname, String cemail) {
+        this.cname = cname;
+        this.cemail = cemail;
+    }
+    public int getCid() {
+        return cid;
+    }
+    public void setCid(int cid) {
+        this.cid = cid;
     }
     public String getCname() {
         return cname;
@@ -18,10 +26,19 @@ public class Customer {
     public void setCname(String cname) {
         this.cname = cname;
     }
-    public String getCcourse() {
-        return ccourse;
+    public String getCemail() {
+        return cemail;
     }
-    public void setCcourse(String ccourse) {
-        this.ccourse = ccourse;
+    public void setCemail(String cemail) {
+        this.cemail = cemail;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "cid=" + cid +
+                ", cname='" + cname + '\'' +
+                ", cemail='" + cemail + '\'' +
+                '}';
     }
 }

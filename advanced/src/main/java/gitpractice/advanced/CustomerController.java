@@ -1,21 +1,24 @@
 package gitpractice.advanced;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class CustomerController {
 
-    @RequestMapping("/greet")
-    public ModelAndView greet(@RequestParam("cname")String cname) {
-
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("cname", cname);
-        mv.setViewName("greet");
-
-        return mv;
+    @GetMapping("/")
+    public String greet(@ModelAttribute("customer") Customer customer) {
+        return "greet";
     }
+
+    @PostMapping("/form")
+    public String form(@ModelAttribute("customer") Customer customer) {
+
+        return "form";
+    }
+
+
 
 }
