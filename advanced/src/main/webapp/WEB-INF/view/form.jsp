@@ -12,12 +12,21 @@
 <body>
 	<h1 align="center">Second Page</h1>
 
-<div align="center">
+	<div align="center">
+		<br> The data is added successfully!
+	</div>
 
-	Customer Id : ${customer.cid} <br><br>
-	Customer Name : ${customer.cname} <br><br>
-	Customer Email : ${customer.cemail} <br><br>
-</div>
+	<h2 align="center">Find Customer by ID</h2>
+	<div align="center">
+		<form action="findCustomerbyId" method="POST">
+
+			Customer ID : <input type="number" name="cid"><br>
+			<br> <input type="submit" value="Search"><br>
+
+		</form>
+	</div>
+
+
 
 </body>
 </html>

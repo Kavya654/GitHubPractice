@@ -1,7 +1,12 @@
 package gitpractice.advanced;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Customer {
 
+    @Id
     private int cid;
     private String cname;
     private String cemail;
